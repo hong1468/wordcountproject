@@ -1,9 +1,30 @@
-<h1>안녕하세요 여기서 글자를 세세요!</h1>
+{% load static %}
+<html lang="en">
+    <head>
+        <!-- 합쳐지고 최소화된 최신 CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
-<a href="{%url 'about' %}">About</a>
+        <!-- 부가적인 테마 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-<form action="{%url 'count' %}">
-    <textarea cols="40" rows="10" name="fulltext"></textarea>
-    <br>
-    <input type="submit" value="Count" />
-</form>
+        <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <!--내가 만든 css 파일-->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        <div class="title">
+            <h1>글자 수 세어주기 프로그램</h1>
+        </div>
+        <br>
+        <div class="aboutme">
+            <a href="{%url 'about' %}">About Me</a>
+        </div>
+        <br>
+        <form action="{%url 'count' %}">
+        <textarea cols="40" rows="10" name="fulltext"></textarea>
+        <br>
+        <input class="btn btn-warning" type="submit" value="Count" />
+        </form>
+    </body>
+</html>
