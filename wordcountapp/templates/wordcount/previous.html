@@ -13,23 +13,7 @@
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
     </head>
     <body>
-        <div class="title">
-            <h1>글자 수 세어주기 프로그램</h1>
-        </div>
-        <br>
-        <div class="aboutme">
-            <a href="{%url 'about' %}">About Me</a>
-        </div>
-        <br>
-        <form action="{%url 'count' %}">
-        <textarea cols="40" rows="10" name="fulltext"></textarea>
-        <br>
-        <input class="btn btn-warning" type="submit" value="Count" />
-        </form>
-
-        <form action="{%url 'previous' %}">
-            <br>
-            <input class="btn btn-warning" type="submit" value="previous" />
-        </form>
+        <h1>이전에 세었던 글</h1>
+        {{ text }}
     </body>
 </html>

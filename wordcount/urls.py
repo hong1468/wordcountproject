@@ -22,4 +22,5 @@ urlpatterns = [
     path('',wordcountapp.views.home, name="home"),
     path('about/',wordcountapp.views.about, name="about"),
     path('count/',wordcountapp.views.count,name="count"),
+    path('previous/',wordcountapp.views.previous, name="previous"),
 ]
